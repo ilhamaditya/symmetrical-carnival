@@ -22,6 +22,6 @@ npm install
 Run tests:
 
 ```bash
-npm npm run android
-npm npm run android:allure (with allure report)
+npm run android
+npm run android:allure (with allure report)
 ```
