@@ -15,6 +15,6 @@ When(/^input "([^"]*)" and "([^"]*)"$/, async (email, password) => {
 
 Then(/^I should see success modal "([^"]*)"$/, async (message) => {
   const messageOutput = await LoginPage.message(message).getText();
-  await expect(messageOutput).to.include(message);
+  expect(messageOutput).to.include(message);
   (await LoginPage.btnOk).click();
 });
