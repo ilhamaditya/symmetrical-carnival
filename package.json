@@ -17,7 +17,11 @@
     "webdriverio": "^8.31.1"
   },
   "scripts": {
-    "android": "wdio run ./wdio.conf.ts",
-    "android:allure": "rm -rf allure-results/* allure-report/* && wdio ./wdio.conf.ts && allure generate allure-results --clean && allure open"
+    "android": "wdio run ./wdio.android.conf.ts",
+    "android:allure": "rm -rf allure-results/* allure-report/* && wdio ./wdio.android.conf.ts && allure generate allure-results --clean && allure open",
+    "ios": "wdio run ./wdio.ios.conf.ts"
+  },
+  "dependencies": {
+    "appium-xcuitest-driver": "^6.2.0"
   }
 }
