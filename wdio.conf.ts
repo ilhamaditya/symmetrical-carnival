@@ -64,14 +64,16 @@ export const config: Options.Testrunner = {
         platformName: 'Android',
         'appium:deviceName': 'Pixel 4 API 31',
         'appium:platformVersion': '12.0',
-        'appium:browserName': 'Chrome',
+        // 'appium:browserName': 'Chrome',
         'appium:automationName': 'UiAutomator2',
         'appium:chromedriverExecutable': './chromedriver',
         'appium:app': './app/android.wdio.native.app.v1.0.8.apk',
+        // 'appium:appPackage': 'com.wdiodemoapp',
+        // 'appium:appActivity': 'com.wdiodemoapp.MainActivity',      
     }],
     
 
-    //
+    //  
     // ===================
     // Test Configurations
     // ===================
@@ -155,7 +157,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./features/step-definitions/*steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
