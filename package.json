@@ -17,6 +17,7 @@
     "webdriverio": "^8.31.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "android": "wdio run ./wdio.conf.ts",
+    "android:allure": "rm -rf allure-results/* allure-report/* && wdio ./wdio.conf.ts && allure generate allure-results --clean && allure open"
   }
 }
