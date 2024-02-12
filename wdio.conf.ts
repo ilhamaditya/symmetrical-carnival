@@ -67,6 +67,7 @@ export const config: Options.Testrunner = {
         'appium:browserName': 'Chrome',
         'appium:automationName': 'UiAutomator2',
         'appium:chromedriverExecutable': './chromedriver',
+        'appium:app': './app/android.wdio.native.app.v1.0.8.apk',
     }],
     
 
