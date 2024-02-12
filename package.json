@@ -2,6 +2,7 @@
   "name": "symmetrical-carnival",
   "type": "module",
   "devDependencies": {
+    "@types/chai": "^4.3.11",
     "@wdio/allure-reporter": "^8.31.1",
     "@wdio/appium-service": "^8.31.1",
     "@wdio/cli": "^8.31.1",
@@ -10,11 +11,13 @@
     "@wdio/spec-reporter": "^8.31.1",
     "appium": "^2.5.0",
     "appium-uiautomator2-driver": "^3.0.0",
+    "chai": "^5.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "webdriverio": "^8.31.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "android": "wdio run ./wdio.conf.ts",
+    "android:allure": "rm -rf allure-results/* allure-report/* && wdio ./wdio.conf.ts && allure generate allure-results --clean && allure open"
   }
 }
